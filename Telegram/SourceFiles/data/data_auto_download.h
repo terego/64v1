@@ -30,6 +30,7 @@ enum class Type {
 	Music                = 0x04,
 	AutoPlayGIF          = 0x05,
 	File                 = 0x06,
+        Video                = 0x07,
 };
 
 inline constexpr auto kAutoPlayTypes = {
@@ -43,7 +44,7 @@ inline constexpr auto kStreamedTypes = {
 	Type::Music,
 };
 
-constexpr auto kTypesCount = 7;
+constexpr auto kTypesCount = 8;
 
 class Single {
 public:
