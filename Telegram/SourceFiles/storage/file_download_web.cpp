@@ -17,7 +17,7 @@ namespace {
 
 constexpr auto kMaxWebFileQueries = 8;
 constexpr auto kMaxHttpRedirects = 5;
-constexpr auto kResetDownloadPrioritiesTimeout = crl::time(200);
+constexpr auto kResetDownloadPrioritiesTimeout = crl::time(100);
 
 std::weak_ptr<WebLoadManager> GlobalLoadManager;
 
