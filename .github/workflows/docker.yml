@@ -10,6 +10,14 @@ on:
       - '.github/workflows/docker.yml'
       - 'Telegram/build/docker/centos_env/**'
 
+  workflow_dispatch:
+    inputs:
+      manual:
+        description: Manual run (bypass default conditions)
+        type: boolean
+        required: true
+        default: true
+
 jobs:
   docker:
     name: Ubuntu
