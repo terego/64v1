@@ -198,7 +198,7 @@ inline void SetNetworkBoost(int boost) {
 
 	cSetNetRequestsCount(2 + (2 * GetEnhancedInt("net_speed_boost")));
 	cSetNetUploadSessionsCount(2 + (2 * GetEnhancedInt("net_speed_boost")));
-	cSetNetUploadRequestInterval(500 - (100 * GetEnhancedInt("net_speed_boost")));
+	cSetNetUploadRequestInterval(400 - (100 * GetEnhancedInt("net_speed_boost")));
 }
 
 inline void SetNetworkDLBoost(bool boost) {
