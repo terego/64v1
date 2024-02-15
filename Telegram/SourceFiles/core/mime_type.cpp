@@ -111,6 +111,12 @@ MimeType MimeTypeForFile(const QFileInfo &file) {
 		return MimeType(MimeType::Known::TDesktopTheme);
 	} else if (path.endsWith(u".tdesktop-palette"_q, Qt::CaseInsensitive)) {
 		return MimeType(MimeType::Known::TDesktopPalette);
+	} else if (path.endsWith(u".mkv"_q, Qt::CaseInsensitive)) {
+		// This will ensure .mkv is detected as a video file by the client when drag-n-dropped
+		return MimeType(QMimeDatabase().mimeTypeForName("video/x-matroska")); 		
+	} else if (path.endsWith(u".m4b"_q, Qt::CaseInsensitive)) {
+		// This will ensure .m4b is detected as a audio file by the client when drag-n-dropped
+		return MimeType(QMimeDatabase().mimeTypeForName("audio/mp4a-latm")); 			
 	}
 
 	{
@@ -159,6 +165,11 @@ bool IsMimeAcceptedForPhotoVideoAlbum(const QString &mime) {
 		|| (mime == u"image/png"_q)
 		|| (mime == u"video/mp4"_q)
 		|| (mime == u"video/x-matroska"_q)
+		|| (mime == u"video/webm"_q)		
+		|| (mime == u"video/x-ms-asf"_q)
+		|| (mime == u"video/x-flv"_q)
+		|| (mime == u"video/MMP2T"_q)
+		|| (mime == u"application/x-shockwave-flash"_q)		
 		|| (mime == u"video/quicktime"_q);
 }
 
@@ -169,6 +180,7 @@ bool FileIsImage(const QString &name, const QString &mime) {
 	} else if (namelower.endsWith(u".bmp"_q)
 		|| namelower.endsWith(u".jpg"_q)
 		|| namelower.endsWith(u".jpeg"_q)
+		|| namelower.endsWith(u".jxl"_q)		
 		|| namelower.endsWith(u".gif"_q)
 		|| namelower.endsWith(u".webp"_q)
 		|| namelower.endsWith(u".tga"_q)
