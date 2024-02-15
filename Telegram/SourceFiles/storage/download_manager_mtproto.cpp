@@ -30,7 +30,7 @@ constexpr auto kRetryAddSessionSuccesses = 3;
 constexpr auto kMaxTrackedSuccesses = kRetryAddSessionSuccesses
 	* kMaxTrackedSessionRemoves;
 constexpr auto kRemoveSessionAfterTimeouts = 4;
-constexpr auto kResetDownloadPrioritiesTimeout = crl::time(200);
+constexpr auto kResetDownloadPrioritiesTimeout = crl::time(100);
 constexpr auto kBadRequestDurationThreshold = 8 * crl::time(1000);
 
 // Each (session remove by timeouts) we wait for time:
