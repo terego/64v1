@@ -40,7 +40,7 @@ constexpr ShiftedDcId groupCallStreamDcId(DcId dcId) {
 	return ShiftDcId(dcId, kGroupCallStreamDcShift);
 }
 
-constexpr auto kUploadSessionsCount = 2;
+constexpr auto kUploadSessionsCount = 8;
 
 constexpr auto kUploadSessionsCountMax = 8;
 
