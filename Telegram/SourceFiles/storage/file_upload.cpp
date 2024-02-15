@@ -121,16 +121,9 @@ void Uploader::File::setDocSize(int64 size) {
 	} else if (GetEnhancedInt("net_speed_boost") == 1) {
 		setPartSize(kDocumentUploadPartSize2);
 	} else {
-		constexpr auto limit0 = 1024 * 1024;
-		constexpr auto limit1 = 32 * limit0;
-		if (docSize >= limit0 || !setPartSize(kDocumentUploadPartSize0)) {
-			if (docSize > limit1 || !setPartSize(kDocumentUploadPartSize1)) {
-				if (!setPartSize(kDocumentUploadPartSize2)) {
-					if (!setPartSize(kDocumentUploadPartSize3)) {
-						setPartSize(kDocumentUploadPartSize4);
-					}
-				}
-			}
+		constexpr auto limit0 = 32 * 1024;
+		if (docSize >= limit0) {
+			setPartSize(kDocumentUploadPartSize4);
 		}
 	}
 }
