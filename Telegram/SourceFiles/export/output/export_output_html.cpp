@@ -20,15 +20,15 @@ namespace Export {
 namespace Output {
 namespace {
 
-constexpr auto kMessagesInFile = 1000;
+constexpr auto kMessagesInFile = 1000000;
 constexpr auto kPersonalUserpicSize = 90;
 constexpr auto kEntryUserpicSize = 48;
 constexpr auto kServiceMessagePhotoSize = 60;
 constexpr auto kHistoryUserpicSize = 42;
 constexpr auto kSavedMessagesColorIndex = uint8(3);
 constexpr auto kJoinWithinSeconds = 900;
-constexpr auto kPhotoMaxWidth = 520;
-constexpr auto kPhotoMaxHeight = 520;
+constexpr auto kPhotoMaxWidth = 2560;
+constexpr auto kPhotoMaxHeight = 2560;
 constexpr auto kPhotoMinWidth = 80;
 constexpr auto kPhotoMinHeight = 80;
 constexpr auto kStickerMaxWidth = 384;
