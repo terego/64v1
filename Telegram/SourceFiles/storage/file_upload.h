@@ -26,7 +26,7 @@ class Session;
 namespace Storage {
 
 // MTP big files methods used for files greater than 10mb.
-constexpr auto kUseBigFilesFrom = 10 * 1024 * 1024;
+constexpr auto kUseBigFilesFrom = 32 * 1024;
 
 struct UploadedMedia {
 	FullMsgId fullId;
