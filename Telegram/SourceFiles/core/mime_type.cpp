@@ -158,6 +158,7 @@ bool IsMimeAcceptedForPhotoVideoAlbum(const QString &mime) {
 	return (mime == u"image/jpeg"_q)
 		|| (mime == u"image/png"_q)
 		|| (mime == u"video/mp4"_q)
+		|| (mime == u"video/x-matroska"_q)
 		|| (mime == u"video/quicktime"_q);
 }
 
