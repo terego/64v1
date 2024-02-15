@@ -110,6 +110,15 @@ struct PreparedFileThumbnail {
 		"image/png",
 		"image/webp",
 		"video/mp4",
+	        "video/x-ms-asf",
+	        "video/x-flv",
+	        "video/x-ms-asf",
+	        "video/x-flv",
+	        "video/MMP2T",
+	        "application/x-shockwave-flash",
+	        "video/MMP2T",
+	        "video/x-matroska",
+	        "application/epub+zip",	
 	};
 	return (filesize > kThumbnailUploadBySize)
 		|| (ranges::find(kThumbnailKnownMimes, filemime.toLower())
@@ -585,7 +594,7 @@ bool FileLoadTask::CheckForSong(
 	static const auto mimes = {
 		u"audio/mp3"_q,
 		u"audio/m4a"_q,
-	        u"audio/m4a"_q,
+	        u"audio/mp4a-latm"_q,
 	        u"audio/mp4"_q,
 		u"audio/aac"_q,
 		u"audio/ogg"_q,
@@ -631,11 +640,23 @@ bool FileLoadTask::CheckForVideo(
 	static const auto mimes = {
 		u"video/mp4"_q,
 		u"video/quicktime"_q,
+	        u"video/x-matroska"_q,
+	        u"video/x-ms-asf"_q,
+	        u"video/x-flv"_q,
+	        u"video/MMP2T"_q,
+	        u"application/x-shockwave-flash"_q,
+	        u"video/webm"_q, 
 	};
 	static const auto extensions = {
 		u".mp4"_q,
 		u".mov"_q,
 		u".m4v"_q,
+	        u".mkv"_q,
+	        u".flv"_q,
+	        u".swf"_q,
+	        u".wmv"_q,
+	        u".ts"_q,
+	        u".m2ts"_q,	
 		u".webm"_q,
 	};
 	if (!CheckMimeOrExtensions(filepath, result->filemime, mimes, extensions)) {
