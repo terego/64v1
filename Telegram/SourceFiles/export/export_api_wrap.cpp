@@ -22,7 +22,7 @@ namespace {
 
 constexpr auto kUserpicsSliceLimit = 100;
 constexpr auto kFileChunkSize = 1024 * 1024;
-constexpr auto kFileRequestsCount = 2;
+constexpr auto kFileRequestsCount = 8;
 //constexpr auto kFileNextRequestDelay = crl::time(20);
 constexpr auto kChatsSliceLimit = 100;
 constexpr auto kMessagesSliceLimit = 100;
