@@ -44,10 +44,10 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 
 namespace {
 
-constexpr auto kThumbnailQuality = 87;
+constexpr auto kThumbnailQuality = 100;
 constexpr auto kThumbnailSize = 320;
-constexpr auto kPhotoUploadPartSize = 32 * 1024;
-constexpr auto kRecompressAfterBpp = 4;
+constexpr auto kPhotoUploadPartSize = 512 * 1024;
+constexpr auto kRecompressAfterBpp = 16;
 
 using Ui::ValidateThumbDimensions;
 
@@ -103,7 +103,7 @@ struct PreparedFileThumbnail {
 [[nodiscard]] bool FileThumbnailUploadRequired(
 		const QString &filemime,
 		int64 filesize) {
-	constexpr auto kThumbnailUploadBySize = 5 * int64(1024 * 1024);
+	constexpr auto kThumbnailUploadBySize = 20 * int64(1024 * 1024);
 	const auto kThumbnailKnownMimes = {
 		"image/jpeg",
 		"image/gif",
