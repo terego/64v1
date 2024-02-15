@@ -198,7 +198,7 @@ struct PreparedFileThumbnail {
 	auto result = QByteArray();
 	QBuffer buffer(&result);
 	QImageWriter writer(&buffer, "JPEG");
-	writer.setQuality(87);
+	writer.setQuality(100);
 	writer.setProgressiveScanWrite(true);
 	writer.write(full);
 	buffer.close();
@@ -585,6 +585,8 @@ bool FileLoadTask::CheckForSong(
 	static const auto mimes = {
 		u"audio/mp3"_q,
 		u"audio/m4a"_q,
+	        u"audio/m4a"_q,
+	        u"audio/mp4"_q,
 		u"audio/aac"_q,
 		u"audio/ogg"_q,
 		u"audio/flac"_q,
@@ -593,6 +595,8 @@ bool FileLoadTask::CheckForSong(
 	static const auto extensions = {
 		u".mp3"_q,
 		u".m4a"_q,
+	        u".m4b"_q,
+	        u".mp4"_q,
 		u".aac"_q,
 		u".ogg"_q,
 		u".flac"_q,
