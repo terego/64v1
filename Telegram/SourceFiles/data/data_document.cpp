@@ -896,9 +896,10 @@ ChatRestriction DocumentData::requiredSendRight() const {
 		: ChatRestriction::SendFiles;
 }
 
+
 void DocumentData::setFileName(const QString &remoteFileName) {
 	_filename = remoteFileName;
-
+	
 	// We don't want LTR/RTL mark/embedding/override/isolate chars
 	// in filenames, because they introduce a security issue, when
 	// an executable "Fil[x]gepj.exe" may look like "Filexe.jpeg".
