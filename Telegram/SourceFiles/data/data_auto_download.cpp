@@ -49,6 +49,7 @@ void SetDefaultsForSource(Full &data, Source source) {
 	data.setBytesLimit(source, Type::File, channelsFileLimit);
 	data.setBytesLimit(source, Type::AutoPlayVideo, kDefaultAutoPlaySize);
 	data.setBytesLimit(source, Type::Music, channelsFileLimit);
+	data.setBytesLimit(source, Type::Video, channelsFileLimit);
 }
 
 const Full &Defaults() {
