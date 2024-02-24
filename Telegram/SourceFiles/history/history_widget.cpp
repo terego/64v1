@@ -3908,7 +3908,7 @@ void HistoryWidget::saveEditMsg() {
 		TextUtilities::ConvertTextTagsToEntities(textWithTags.tags) };
 	TextUtilities::PrepareForSending(left, prepareFlags);
 
-	const auto media = item->media();
+	
 	if (!TextUtilities::CutPart(sending, left, MaxMessageSize)
 		&& (webPageDraft.removed
 			|| webPageDraft.url.isEmpty()
